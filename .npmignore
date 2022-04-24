@@ -1,0 +1,9 @@
+.github
+src
+test
+.eslintignore
+.eslintrc
+.releaserc
+package-lock.json
+rollup.config.js
+tsconfig.json
