@@ -3,27 +3,29 @@ name: FlowRage Development Actions
 on:
   push:
     branches:
-     - main
+      - main
+
+env:
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
 jobs:
   lint:
- 
-   runs-on: ubuntu-lastest
-   
-   strategy:
-     matrix:
-        node-version: [ 10.x, 12.x, 16.x ]
-        
-   steps:
-   - uses: actions/checkout@v3
-   - uses: actions/checkout@v3
-   - name: Use Node.js ${{ matrix.node-version }}
-     uses: actions/setup-node@v3
-     with:
-       node-version: ${{ matrix.node-version }}
-       cache: 'npm'
-   - run: npm ci
-   - run: npm run lint
+    runs-on: ubuntu-lastest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 16.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+      - run: npm ci
+      - run: npm run lint
 
   build:
     needs: [lint]
@@ -35,15 +37,15 @@ jobs:
         node-version: [10.x, 12.x, 16.x]
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run build
-  
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+      - run: npm ci
+      - run: npm run build
+
   release:
     needs: [build]
 
@@ -54,14 +56,11 @@ jobs:
         node-version: [16.x]
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    env:
-      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-
-    - run: npm ci
-    - run: npm run release
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+      - run: npm ci
+      - run: npm run release
