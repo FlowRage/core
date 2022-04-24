@@ -8,7 +8,8 @@
     "test": "jest",
     "build": "rollup -c",
     "build:production": "rollup -c --environment production",
-    "lint": "eslint --fix src/**/*.ts"
+    "lint": "eslint --fix src/**/*.ts",
+    "release": "semantic-release"
   },
   "repository": {
     "type": "git",
