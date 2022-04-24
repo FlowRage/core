@@ -3,7 +3,7 @@ name: FlowRage Development Actions
 on:
   push:
     branches:
-      - development
+      - dev
 
 jobs:
   lint:
