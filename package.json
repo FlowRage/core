@@ -1,6 +1,6 @@
 {
   "name": "@flowrage/core",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Flow is a Rage Multiplayer Framework for blazing-fast developing gamemodes",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

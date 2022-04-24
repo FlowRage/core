@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/FlowRage/core/compare/v1.0.3...v1.0.4) (2022-04-24)
+
+
+### Bug Fixes
+
+* adding npm ignore file ([7d66fcc](https://github.com/FlowRage/core/commit/7d66fccaa9fb89fd27f6f6213b2d7e0e4d07c516))
+
 ## [1.0.3](https://github.com/FlowRage/core/compare/v1.0.2...v1.0.3) (2022-04-24)
 
 
