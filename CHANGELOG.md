@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/FlowRage/core/compare/v1.0.0...v1.0.1) (2022-04-24)
+
+
+### Bug Fixes
+
+* deleting useless command to test ([e70b785](https://github.com/FlowRage/core/commit/e70b7852fcca0616bc5348e22913dc57618256f0))
+
 # 1.0.0 (2022-04-24)
 
 
