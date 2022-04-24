@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "ES6",
+    "target": "ES5",
+    "moduleResolution": "node",
+    "allowJs": false,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "alwaysStrict": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "typeRoots": [ "./node_modules/@types" ],
+    "lib": [ "ES2021" ]
+  },
+  "exclude": [
+    "./node_modules"
+  ]
+}
