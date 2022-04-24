@@ -1,4 +1,4 @@
-name: FlowRage Development Actions
+name: FlowRage Release/Production Actions
 
 on:
   push:
