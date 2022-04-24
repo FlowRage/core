@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/FlowRage/core/compare/v1.0.4...v1.0.5) (2022-04-24)
+
+
+### Bug Fixes
+
+* adding publishConfig to package.json ([ab57546](https://github.com/FlowRage/core/commit/ab575468f26083ca126c3d10cffb682dbbe8a8d4))
+
 ## [1.0.4](https://github.com/FlowRage/core/compare/v1.0.3...v1.0.4) (2022-04-24)
 
 
