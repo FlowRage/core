@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/FlowRage/core/compare/v1.0.1...v1.0.2) (2022-04-24)
+
+
+### Bug Fixes
+
+* adding @semantic-release/npm to update package.json ([38ac965](https://github.com/FlowRage/core/commit/38ac9654b05bd2b25fe88d007ef6c7659437dc2a))
+
 ## [1.0.1](https://github.com/FlowRage/core/compare/v1.0.0...v1.0.1) (2022-04-24)
 
 
