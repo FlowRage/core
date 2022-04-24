@@ -5,7 +5,6 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "jest",
     "build": "rollup -c",
     "build:production": "rollup -c --environment production",
     "lint": "eslint --fix src/**/*.ts",
