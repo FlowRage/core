@@ -44,7 +44,7 @@ jobs:
     - run: npm ci
     - run: npm run build
   
-  build:
+  release:
     needs: [build]
 
     runs-on: ubuntu-latest
