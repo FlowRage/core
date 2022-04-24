@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/FlowRage/core/compare/v1.0.2...v1.0.3) (2022-04-24)
+
+
+### Bug Fixes
+
+* fixing name of workflow ([d8aa350](https://github.com/FlowRage/core/commit/d8aa350fe0ceb12ecc4b4f577576fb07713be508))
+
 ## [1.0.2](https://github.com/FlowRage/core/compare/v1.0.1...v1.0.2) (2022-04-24)
 
 
