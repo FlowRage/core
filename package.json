@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "rollup -c && npm run types",
-    "build:production": "rollup -c --environment production",
+    "build:production": "rollup -c --environment production && npm run types",
     "lint": "eslint --fix src/**/*.ts",
     "release": "semantic-release",
     "types": "tsc src/index.ts --declaration --resolveJsonModule --emitDeclarationOnly --outDir dist"
