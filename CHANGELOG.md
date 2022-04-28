@@ -1,3 +1,14 @@
+# [1.4.0](https://github.com/FlowRage/core/compare/v1.3.0...v1.4.0) (2022-04-28)
+
+
+### Update
+
+* rewriting types and changing commit style preset ([288c64b](https://github.com/FlowRage/core/commit/288c64b039a2099ed06f273c26b26d81004f9953))
+
+### Upgrade
+
+* adding conventional-changelog-eslint ([74eb8ef](https://github.com/FlowRage/core/commit/74eb8ef8cd3bdaacd80b25ea445ade95483187c2))
+
 # [1.3.0](https://github.com/FlowRage/core/compare/v1.2.0...v1.3.0) (2022-04-28)
 
 
