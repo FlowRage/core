@@ -34,63 +34,27 @@ function define<
   Object.defineProperty(obj, prop, val);
 }
 
-export declare module Flow {
-  namespace Custom {
-    interface Properties {}
-
-    namespace Plugin {
-      type Options = {};
-    }
-  }
-
-  namespace Plugin {
-    type Dependecie = {
-      name: string;
-      package: string;
-    };
-
-    namespace Internal {
-      type Options = {
-        context: Flow.Instance;
-        name: string;
-        package: string;
-        dependepcies: Array<Flow.Plugin.Dependecie>;
-      } & Flow.Custom.Plugin.Options;
-    }
-
-    namespace External {
-      type Options = {
-        name: string;
-        package: string;
-        dependepcies: Array<Flow.Plugin.Dependecie>;
-      } & Flow.Custom.Plugin.Options;
-    }
-  }
-
-  type Plugins = Array<{ name: string; package: string }>;
-
-  type Instance = {
-    name: string;
-    version: string;
-
-    plugins(): Plugins;
-
-    use(Plugin: typeof APlugin, options: Flow.Plugin.External.Options): void;
-  } & Flow.Custom.Properties;
-
-  type Options = {
-    name?: string;
-    version?: string;
-  };
-}
-
-export class APlugin {
+export type PluginOptions = {
+  context: FlowInstance;
   name: string;
-  context: Flow.Instance;
   package: string;
-  dependecies: Array<Flow.Plugin.Dependecie>;
+  dependepcies: Array<PluginDependecie>;
+} & FlowCustomPluginOptions;
+
+export type ContextPlugins = Array<{ name: string; package: string }>;
+
+export type PluginDependecie = {
+  name: string;
+  package: string;
+};
+
+export class IPlugin {
+  name: string;
+  context: FlowInstance;
+  package: string;
+  dependecies: Array<PluginDependecie>;
   dependeciesCheck: boolean;
-  constructor(options: Flow.Plugin.Internal.Options) {
+  constructor(options: PluginOptions) {
     this.name = options.name;
     this.context = options.context;
 
@@ -103,7 +67,7 @@ export class APlugin {
 
     function checkDependencies(): boolean {
       const PLUGINS = FLOW.plugins();
-      let missedDependencies: Array<Flow.Plugin.Dependecie> = [];
+      let missedDependencies: Array<PluginDependecie> = [];
 
       for (let index = 0; index < PLUGIN.dependecies.length; index++) {
         let dependecie = PLUGIN.dependecies[index];
@@ -148,15 +112,39 @@ export class APlugin {
   }
 }
 
+export type FlowOptions = {
+  name?: string;
+  version?: string;
+};
+
+export type FlowPluginOptions = {
+  name: string;
+  package: string;
+  dependepcies: Array<PluginDependecie>;
+} & FlowCustomPluginOptions;
+
+export declare interface FlowCustomProperties {}
+
+export declare interface FlowCustomPluginOptions {}
+
+export declare type FlowInstance = {
+  name: string;
+  version: string;
+
+  plugins(): ContextPlugins;
+
+  use(Plugin: typeof IPlugin, options: FlowPluginOptions): void;
+} & FlowCustomProperties;
+
 export function createFlow(
-  options: Flow.Options = { name: "FlowRage Gamemode", version: "0.0.1" }
-): Flow.Instance {
-  let flow: Flow.Instance = Object.create({
+  options: FlowOptions = { name: "FlowRage Gamemode", version: "0.0.1" }
+): FlowInstance {
+  let flow: FlowInstance = Object.create({
     name: options.name,
     version: options.version,
-    plugins: (): Flow.Plugins => {
+    plugins: (): ContextPlugins => {
       const reserved = ["name", "version", "plugins", "use"];
-      let result: Flow.Plugins = [];
+      let result: ContextPlugins = [];
 
       const PluginProperties: Array<string> = Object.keys(flow).filter(
         (el) => !reserved.some((rs) => rs === el)
@@ -176,10 +164,7 @@ export function createFlow(
 
       return result;
     },
-    use: (
-      Plugin: typeof APlugin,
-      options: Flow.Plugin.External.Options
-    ): void => {
+    use: (Plugin: typeof IPlugin, options: FlowPluginOptions): void => {
       const plug = new Plugin({
         context: flow,
         ...options,
