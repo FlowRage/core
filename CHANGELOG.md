@@ -1,3 +1,11 @@
+# [1.1.0](https://github.com/FlowRage/core/compare/v1.0.5...v1.1.0) (2022-04-28)
+
+
+### Features
+
+* adding core function to create FlowRage instance and Plugin class ([265f8b3](https://github.com/FlowRage/core/commit/265f8b316d41d241c5cff71c96679401b77f7f4a))
+* adding dependencies checking for plugins ([81b02de](https://github.com/FlowRage/core/commit/81b02ded7cf2f609fd5c4e66535e66a8ed39b991))
+
 ## [1.0.5](https://github.com/FlowRage/core/compare/v1.0.4...v1.0.5) (2022-04-24)
 
 
