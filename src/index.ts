@@ -48,7 +48,7 @@ export type PluginDependecie = {
   package: string;
 };
 
-export class Plugin {
+export class IPlugin {
   name: string;
   context: FlowInstance;
   package: string;
@@ -133,7 +133,7 @@ export declare type FlowInstance = {
 
   plugins(): ContextPlugins;
 
-  use(plugin: typeof Plugin, options: FlowPluginOptions): void;
+  use(Plugin: typeof IPlugin, options: FlowPluginOptions): void;
 } & FlowCustomProperties;
 
 export function createFlow(
@@ -164,8 +164,8 @@ export function createFlow(
 
       return result;
     },
-    use: (plugin: typeof Plugin, options: FlowPluginOptions): void => {
-      const plug = new plugin({
+    use: (Plugin: typeof IPlugin, options: FlowPluginOptions): void => {
+      const plug = new Plugin({
         context: flow,
         ...options,
       });
