@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/FlowRage/core/compare/v1.2.0...v1.3.0) (2022-04-28)
+
+
+### Features
+
+* rewriting types back to previous version ([9b050ec](https://github.com/FlowRage/core/commit/9b050eca8e03aaf0eadf126cc7ceda36d8b1287e))
+
 # [1.2.0](https://github.com/FlowRage/core/compare/v1.1.0...v1.2.0) (2022-04-28)
 
 
