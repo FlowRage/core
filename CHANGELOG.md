@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/FlowRage/core/compare/v1.1.0...v1.2.0) (2022-04-28)
+
+
+### Features
+
+* adding production compressing ([8811ec8](https://github.com/FlowRage/core/commit/8811ec869f1a4c5d4e39d4f49456ba01a6714993))
+
 # [1.1.0](https://github.com/FlowRage/core/compare/v1.0.5...v1.1.0) (2022-04-28)
 
 
