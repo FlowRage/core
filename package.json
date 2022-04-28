@@ -1,14 +1,15 @@
 {
   "name": "@flowrage/core",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "Flow is a Rage Multiplayer Framework for blazing-fast developing gamemodes",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup -c && npm run types",
     "build:production": "rollup -c --environment production",
     "lint": "eslint --fix src/**/*.ts",
-    "release": "semantic-release"
+    "release": "semantic-release",
+    "types": "tsc src/index.ts --declaration --resolveJsonModule --emitDeclarationOnly --outDir dist"
   },
   "repository": {
     "type": "git",
