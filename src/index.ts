@@ -54,7 +54,7 @@ export declare module Flow {
         context: Flow.Instance;
         name: string;
         package: string;
-        dependencies: Array<Flow.Plugin.Dependecie>;
+        dependencies: Array<Flow.Plugin.Dependecie> | never[];
       } & Flow.Custom.Plugin.Options;
     }
 
@@ -62,7 +62,7 @@ export declare module Flow {
       type Options = {
         name: string;
         package: string;
-        dependencies: Array<Flow.Plugin.Dependecie>;
+        dependencies: Array<Flow.Plugin.Dependecie> | never[];
       } & Flow.Custom.Plugin.Options;
     }
   }
@@ -88,7 +88,7 @@ export class APlugin {
   name: string;
   private context: Flow.Instance;
   package: string;
-  private dependencies: Array<Flow.Plugin.Dependecie>;
+  private dependencies: Array<Flow.Plugin.Dependecie> | never[];
   dependeciesCheck: boolean;
   constructor(options: Flow.Plugin.Internal.Options) {
     this.name = options.name;
