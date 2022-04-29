@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/FlowRage/core/compare/v1.4.1...v1.4.2) (2022-04-29)
+
+
+### Bug Fixes
+
+* **types:** adding type Array<never> to plugin dependencies ([8072e69](https://github.com/FlowRage/core/commit/8072e699f6a73a60464c7b5047f06c07531d2a90))
+
 ## [1.4.1](https://github.com/FlowRage/core/compare/v1.4.0...v1.4.1) (2022-04-29)
 
 
