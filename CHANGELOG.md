@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/FlowRage/core/compare/v1.4.2...v1.5.0) (2022-04-29)
+
+
+### Features
+
+* force update ([a0f56c4](https://github.com/FlowRage/core/commit/a0f56c4d3f2d4b4d952bc140e055f6344b9e4a20))
+
 ## [1.4.2](https://github.com/FlowRage/core/compare/v1.4.1...v1.4.2) (2022-04-29)
 
 
