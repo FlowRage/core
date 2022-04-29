@@ -39,7 +39,7 @@ export declare module Flow {
     interface Properties {}
 
     namespace Plugin {
-      type Options = {};
+      interface Options {}
     }
   }
 
@@ -54,7 +54,7 @@ export declare module Flow {
         context: Flow.Instance;
         name: string;
         package: string;
-        dependepcies: Array<Flow.Plugin.Dependecie>;
+        dependencies: Array<Flow.Plugin.Dependecie>;
       } & Flow.Custom.Plugin.Options;
     }
 
@@ -62,7 +62,7 @@ export declare module Flow {
       type Options = {
         name: string;
         package: string;
-        dependepcies: Array<Flow.Plugin.Dependecie>;
+        dependencies: Array<Flow.Plugin.Dependecie>;
       } & Flow.Custom.Plugin.Options;
     }
   }
@@ -86,27 +86,25 @@ export declare module Flow {
 
 export class APlugin {
   name: string;
-  context: Flow.Instance;
+  private context: Flow.Instance;
   package: string;
-  dependecies: Array<Flow.Plugin.Dependecie>;
+  private dependencies: Array<Flow.Plugin.Dependecie>;
   dependeciesCheck: boolean;
   constructor(options: Flow.Plugin.Internal.Options) {
     this.name = options.name;
     this.context = options.context;
+    this.dependencies = options.dependencies;
+    this.package = options.package;
 
     const PLUGIN = this;
     const FLOW = this.context;
-
-    this.package = options.package;
-
-    this.dependecies = options.dependepcies;
 
     function checkDependencies(): boolean {
       const PLUGINS = FLOW.plugins();
       let missedDependencies: Array<Flow.Plugin.Dependecie> = [];
 
-      for (let index = 0; index < PLUGIN.dependecies.length; index++) {
-        let dependecie = PLUGIN.dependecies[index];
+      for (let index = 0; index < PLUGIN.dependencies.length; index++) {
+        let dependecie = PLUGIN.dependencies[index];
 
         if (
           !PLUGINS.some(
