@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/FlowRage/core/compare/v1.4.0...v1.4.1) (2022-04-29)
+
+
+### Bug Fixes
+
+* **types:** changing type Custom.Plugin.Options to interface Custom.Plugin.Options ([19f0813](https://github.com/FlowRage/core/commit/19f08134879e98e115f00f4b35790905760f6fdf))
+
 # [1.4.0](https://github.com/FlowRage/core/compare/v1.3.0...v1.4.0) (2022-04-28)
 
 
