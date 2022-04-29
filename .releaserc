@@ -7,7 +7,7 @@
       [
         "@semantic-release/commit-analyzer",
         {
-          "preset": "eslint",
+          "preset": "@pragmatics/preset",
           "parserOpts": {
             "noteKeywords": [
               "BREAKING CHANGE",
@@ -19,7 +19,7 @@
       [
         "@semantic-release/release-notes-generator",
         {
-          "preset": "eslint",
+          "preset": "@pragmatics/preset",
           "parserOpts": {
             "noteKeywords": [
               "BREAKING CHANGE",
