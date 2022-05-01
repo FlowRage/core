@@ -86,9 +86,9 @@ export declare module Flow {
 
 export class APlugin {
   name: string;
-  private context: Flow.Instance;
+  protected context: Flow.Instance;
   package: string;
-  private dependencies: Array<Flow.Plugin.Dependecie>;
+  protected dependencies: Array<Flow.Plugin.Dependecie>;
   dependeciesCheck: boolean;
   constructor(options: Flow.Plugin.Internal.Options) {
     this.name = options.name;
