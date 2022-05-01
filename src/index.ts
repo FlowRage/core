@@ -37,10 +37,6 @@ function define<
 export declare module Flow {
   namespace Custom {
     interface Properties {}
-
-    namespace Plugin {
-      interface Options {}
-    }
   }
 
   namespace Plugin {
@@ -55,7 +51,8 @@ export declare module Flow {
         name: string;
         package: string;
         dependencies: Array<Flow.Plugin.Dependecie>;
-      } & Flow.Custom.Plugin.Options;
+        [key: string]: any;
+      };
     }
 
     namespace External {
@@ -63,7 +60,8 @@ export declare module Flow {
         name: string;
         package: string;
         dependencies: Array<Flow.Plugin.Dependecie>;
-      } & Flow.Custom.Plugin.Options;
+        [key: string]: any;
+      };
     }
   }
 
