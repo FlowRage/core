@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/FlowRage/core/compare/v1.6.1...v1.7.0) (2022-05-01)
+
+
+### Features
+
+* removing interface for custom plugin options and adding expansion option to Internal and External Options ([e685f8f](https://github.com/FlowRage/core/commit/e685f8ff3f3cbf482e4ab9b9b5d6a4fb74de5bd4))
+
 ## [1.6.1](https://github.com/FlowRage/core/compare/v1.6.0...v1.6.1) (2022-05-01)
 
 
