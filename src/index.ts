@@ -75,7 +75,10 @@ export declare module Flow {
 
     plugins(): Plugins;
 
-    use(Plugin: typeof APlugin, options: Flow.Plugin.External.Options): void;
+    use(
+      Plugin: typeof APlugin,
+      options: Flow.Plugin.External.Options
+    ): Flow.Instance;
   } & Flow.Custom.Properties;
 
   type Options = {
