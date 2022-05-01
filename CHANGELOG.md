@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/FlowRage/core/compare/v1.6.0...v1.6.1) (2022-05-01)
+
+
+### Bug Fixes
+
+* fixing type of return of method use in flow intance to provide previous update ([3db1f24](https://github.com/FlowRage/core/commit/3db1f247905bc5d4c87e426130c8476d3d2232b7))
+
 # [1.6.0](https://github.com/FlowRage/core/compare/v1.5.1...v1.6.0) (2022-05-01)
 
 
