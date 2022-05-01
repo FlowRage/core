@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/FlowRage/core/compare/v1.5.0...v1.5.1) (2022-05-01)
+
+
+### Bug Fixes
+
+* changing private state of context and dependencies to protected to have access from child class ([f8ebbfd](https://github.com/FlowRage/core/commit/f8ebbfd74e5d14fe25e3f3defa3a0c51961256be))
+
 # [1.5.0](https://github.com/FlowRage/core/compare/v1.4.2...v1.5.0) (2022-04-29)
 
 
