@@ -177,7 +177,7 @@ export function createFlow(
     use: (
       Plugin: typeof APlugin,
       options: Flow.Plugin.External.Options
-    ): void => {
+    ): Flow.Instance => {
       const plug = new Plugin({
         context: flow,
         ...options,
@@ -197,6 +197,8 @@ export function createFlow(
           console.log("Plugin %s already defined", plug.name);
         }
       }
+
+      return flow;
     },
   });
 
